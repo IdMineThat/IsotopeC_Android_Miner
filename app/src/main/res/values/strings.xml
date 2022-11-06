@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tidecoin Miner</string>
+    <string name="app_name">IsotopeC Miner</string>
     <string name="na">n/a</string>
 
     <string name="battery_temp_max">Battery Temp. Max.</string>
