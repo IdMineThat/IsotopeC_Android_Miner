@@ -362,13 +362,13 @@ public class MiningForeGroundService extends Service {
                                 }
                             }
 
-                            if(tdcAddressProv != null && tdcAddressProv != "" && mobileDataAvoid && isWiFi && BatteryTemp < batteryTempMax && getBatteryPercentage() > batteryLevelMin && deviceIsCharging && !miningLibary.miner.isMiningRunning()){
+                            if(isoAddressProv != null && isoAddressProv != "" && mobileDataAvoid && isWiFi && BatteryTemp < batteryTempMax && getBatteryPercentage() > batteryLevelMin && deviceIsCharging && !miningLibary.miner.isMiningRunning()){
                                 wakeLock.acquire(1440*60*1000L /*one day*/);
                                 BitZenyMiningLibrary.Algorithm algorithm = BitZenyMiningLibrary.Algorithm.YESPOWER;
                                 if (wakeLock.isHeld()){
                                     miningLibary.miner.startMining(
                                             (String)miningPoolAddress,
-                                            (String)tdcAddressProv + ".IsoMine-App",
+                                            (String)isoAddressProv + ".IsoMine-App",
                                             (String)"c=ISO",
                                             (int)cpuCoresSelected,
                                             algorithm);
