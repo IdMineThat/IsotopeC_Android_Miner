@@ -126,24 +126,24 @@ public class MiningForeGroundService extends Service {
         }
 
         String miningPool = PreferenceManager.getDefaultSharedPreferences(this).getString("mining_pool_selected", "0");
-        if (miningPool.contains("4") && miningPoolAddress != "stratum+tcp://eu.cryptopool.one:6243"){
-            miningPoolAddress = "stratum+tcp://eu.cryptopool.one:6243";
+        if (miningPool.contains("4") && miningPoolAddress != "stratum+tcp://191.33.253.162:9585"){
+            miningPoolAddress = "stratum+tcp://191.33.253.162:9585";
             someThingChanged = true;
         }
-        if (miningPool.contains("3") && miningPoolAddress != "stratum+tcp://178.170.40.44:6243"){
-            miningPoolAddress = "stratum+tcp://178.170.40.44:6243";
+        if (miningPool.contains("3") && miningPoolAddress != "stratum+tcp://us.mining4people.com:3341"){
+            miningPoolAddress = "stratum+tcp://us.mining4people.com:3341";
             someThingChanged = true;
         }
-        if (miningPool.contains("2") && miningPoolAddress != "stratum+tcp://eu1-pool.tidecoin.exchange:3033"){
-            miningPoolAddress = "stratum+tcp://eu1-pool.tidecoin.exchange:3033";
+        if (miningPool.contains("2") && miningPoolAddress != "stratum+tcp://eu-stratum.phalanxmine.com:6235"){
+            miningPoolAddress = "stratum+tcp://eu-stratum.phalanxmine.com:6235";
             someThingChanged = true;
         }
-        if (miningPool.contains("1") && miningPoolAddress != "stratum+tcp://tidemine.com:3332"){
-            miningPoolAddress = "stratum+tcp://tidemine.com:3332";
+        if (miningPool.contains("1") && miningPoolAddress != "stratum+tcp://pool.isotopec.org:7530"){
+            miningPoolAddress = "stratum+tcp://pool.isotopec.org:7530";
             someThingChanged = true;
         }
-        if (miningPool.contains("0") && miningPoolAddress != "stratum+tcp://tidecoin.ru:6243"){
-            miningPoolAddress = "stratum+tcp://tidecoin.ru:6243";
+        if (miningPool.contains("0") && miningPoolAddress != "209.126.6.239:7652"){
+            miningPoolAddress = "stratum+tcp://209.126.6.239:7652";
             someThingChanged = true;
         }
 
