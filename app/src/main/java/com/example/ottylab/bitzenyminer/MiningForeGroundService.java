@@ -106,7 +106,7 @@ public class MiningForeGroundService extends Service {
         return (int)(level / (float)scale * 100);
     }
 
-    String tdcAddressProv = "";
+    String isoAddressProv = "";
     String miningPoolAddress = "";
     boolean mobileDataAvoid = true;
     boolean batteryForMining = false;
@@ -119,9 +119,9 @@ public class MiningForeGroundService extends Service {
         boolean someThingChanged = false;
 
         SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref",MODE_PRIVATE);
-        String tdcAddress = sharedPreferences.getString("user", "");
-        if (tdcAddressProv != tdcAddress) {
-            tdcAddressProv = tdcAddress;
+        String isoAddress = sharedPreferences.getString("user", "");
+        if (isoAddressProv != isoAddress) {
+            isoAddressProv = isoAddress;
             someThingChanged = true;
         }
 
@@ -346,13 +346,13 @@ public class MiningForeGroundService extends Service {
                             if (batteryForMining){
                                 deviceIsCharging = true;
                             }
-                            if(tdcAddressProv != null && tdcAddressProv != "" && !mobileDataAvoid && BatteryTemp < batteryTempMax && getBatteryPercentage() > batteryLevelMin && deviceIsCharging && !miningLibary.miner.isMiningRunning()){
+                            if(tdcAddressProv != null && isoAddressProv != "" && !mobileDataAvoid && BatteryTemp < batteryTempMax && getBatteryPercentage() > batteryLevelMin && deviceIsCharging && !miningLibary.miner.isMiningRunning()){
                                 wakeLock.acquire(1440*60*1000L /*one day*/);
                                 BitZenyMiningLibrary.Algorithm algorithm = BitZenyMiningLibrary.Algorithm.YESPOWER;
                                 if (wakeLock.isHeld()){
                                     miningLibary.miner.startMining(
                                             (String)miningPoolAddress,
-                                            (String)tdcAddressProv + ".TideMine-App",
+                                            (String)isoAddressProv + ".IsoMine-App",
                                             (String)"c=ISO",
                                             (int)cpuCoresSelected,
                                             algorithm);
@@ -368,7 +368,7 @@ public class MiningForeGroundService extends Service {
                                 if (wakeLock.isHeld()){
                                     miningLibary.miner.startMining(
                                             (String)miningPoolAddress,
-                                            (String)tdcAddressProv + ".TideMine-App",
+                                            (String)tdcAddressProv + ".IsoMine-App",
                                             (String)"c=ISO",
                                             (int)cpuCoresSelected,
                                             algorithm);
