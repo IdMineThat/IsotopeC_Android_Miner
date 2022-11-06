@@ -24,7 +24,7 @@
     <string name="prefs_enable_stats">prefs_enable_stats</string>
     <string name="enable_stats">Enable stats for nerds</string>
     <string name="setAddress">Set Address</string>
-    <string name="my_hint">Please insert your tdc address</string>
+    <string name="my_hint">Please insert your ISO address</string>
     <string name="cpu_threads_mining" />
     <string name="cpu_threads_selected" />
     <string name="accu_for_mining">accu_for_mining</string>
