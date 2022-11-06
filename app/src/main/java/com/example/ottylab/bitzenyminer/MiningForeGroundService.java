@@ -338,7 +338,7 @@ public class MiningForeGroundService extends Service {
                             }
 
 
-                            if (tdcAddressProv == null || isoAddressProv == ""){
+                            if (isoAddressProv == null || isoAddressProv == ""){
                                 sendLogs("[STATUS] Device is not mining\nPlease provide your ISO - Address.");
                             }
 
@@ -346,7 +346,7 @@ public class MiningForeGroundService extends Service {
                             if (batteryForMining){
                                 deviceIsCharging = true;
                             }
-                            if(tdcAddressProv != null && isoAddressProv != "" && !mobileDataAvoid && BatteryTemp < batteryTempMax && getBatteryPercentage() > batteryLevelMin && deviceIsCharging && !miningLibary.miner.isMiningRunning()){
+                            if(isoAddressProv != null && isoAddressProv != "" && !mobileDataAvoid && BatteryTemp < batteryTempMax && getBatteryPercentage() > batteryLevelMin && deviceIsCharging && !miningLibary.miner.isMiningRunning()){
                                 wakeLock.acquire(1440*60*1000L /*one day*/);
                                 BitZenyMiningLibrary.Algorithm algorithm = BitZenyMiningLibrary.Algorithm.YESPOWER;
                                 if (wakeLock.isHeld()){
