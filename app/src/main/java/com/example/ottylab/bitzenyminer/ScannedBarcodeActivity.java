@@ -104,7 +104,7 @@ public class ScannedBarcodeActivity extends AppCompatActivity {
                             intentData = barcodes.valueAt(0).displayValue;
                             txtBarcodeValue.setText(intentData);
 
-                            String user = intentData.replace("tidecoin:","");
+                            String user = intentData.replace("isoptopec:","");
                             user = user.replaceAll("\\s", "");
 
                             int index = user.indexOf('?');
