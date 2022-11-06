@@ -254,7 +254,7 @@ public class MiningForeGroundService extends Service {
                 .setOngoing(true);
 
         PowerManager powerManager = (PowerManager) getSystemService(Context.POWER_SERVICE);
-        PowerManager.WakeLock wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "Mining:Tidecoin");
+        PowerManager.WakeLock wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "Mining:IsotopeC");
         wakeLock.setReferenceCounted(true);
         wakeLock.setWorkSource(new WorkSource());
 
