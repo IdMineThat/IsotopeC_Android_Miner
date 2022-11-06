@@ -250,7 +250,7 @@ public class MiningForeGroundService extends Service {
                 .setSmallIcon(R.drawable.ic_launcher_background)
                 .setSubText("used cores: " + cpuCoresSelected)
                 .setUsesChronometer(true)
-                .setContentTitle("TDC Miner")
+                .setContentTitle("ISO Miner")
                 .setOngoing(true);
 
         PowerManager powerManager = (PowerManager) getSystemService(Context.POWER_SERVICE);
