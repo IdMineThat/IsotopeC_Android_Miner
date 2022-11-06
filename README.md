@@ -20,6 +20,6 @@ Your device will then not fall into a "lazy" mode.
 
 ## Screens
 
-![screen](img/01.png)
+![screen](img/01b.png)
 ![screen](img/02.png)
 ![screen](img/03.png)
