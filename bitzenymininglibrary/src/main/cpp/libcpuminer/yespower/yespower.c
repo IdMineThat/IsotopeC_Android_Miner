@@ -69,7 +69,7 @@ int scanhash_yespower(int thr_id, uint32_t *pdata,
 	static const yespower_params_t params = {
 		.version = YESPOWER_1_0,
 		.N = 2048,
-		.r = 8,
+		.r = 32,
 		.pers = "IsotopeC",
 		.perslen = 8
 	};
