@@ -3,7 +3,7 @@
 
 ## Start Mining
 - Scan your ISO Address
-- Choosing a mining pool. As of the development, 'tidecoin.ru' was a good choice, since very small amounts are paid out.
+- Choosing a mining pool. Still working on a specific pool configurd for the low hash rates of phones.
 - Set battery level and maximum battery temperature.
 - Set if you also like to mine with battery / mobile data.
 
