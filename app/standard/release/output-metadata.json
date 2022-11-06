@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.IsotopeC.ISOminer",
+  "applicationId": "com.example.isotopec.isominer",
   "variantName": "standardRelease",
   "elements": [
     {
