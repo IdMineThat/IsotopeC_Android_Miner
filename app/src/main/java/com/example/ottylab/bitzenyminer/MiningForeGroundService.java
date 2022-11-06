@@ -338,7 +338,7 @@ public class MiningForeGroundService extends Service {
                             }
 
 
-                            if (tdcAddressProv == null || tdcAddressProv == ""){
+                            if (tdcAddressProv == null || isoAddressProv == ""){
                                 sendLogs("[STATUS] Device is not mining\nPlease provide your ISO - Address.");
                             }
 
@@ -380,7 +380,7 @@ public class MiningForeGroundService extends Service {
 
                             if(miningLibary.miner.isMiningRunning()){
                                 sendHashrate(miningLibary.hashrateConfirmed);
-                                sendLogs("[STATUS] Device is Mining\nLOG:" + miningLibary.logMessage + "\nPool: " + miningPoolAddress + "\nISO Address: " + tdcAddressProv + "\nCPU Cores: " + cpuCoresSelected + "/" + cpuCoresMax);
+                                sendLogs("[STATUS] Device is Mining\nLOG:" + miningLibary.logMessage + "\nPool: " + miningPoolAddress + "\nISO Address: " + isoAddressProv + "\nCPU Cores: " + cpuCoresSelected + "/" + cpuCoresMax);
                             }else{
                                 sendHashrate(0);
 
