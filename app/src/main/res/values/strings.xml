@@ -54,11 +54,11 @@
     </string-array>
 
     <string-array name="pref_mining_pool">
-        <item>tidecoin.ru</item>
-        <item>tidemine.com</item>
-        <item>tidecoin.exchange</item>
-        <item>tidepool.world</item>
-        <item>cryptopool.one</item>
+        <item>209.126.6.239</item>
+        <item>isotopec.org</item>
+        <item>phlaanxmine.com</item>
+        <item>mining4people.com</item>
+        <item>zpool.ca</item>
     </string-array>
 
     <string-array name="cpu_cores_selectable">
