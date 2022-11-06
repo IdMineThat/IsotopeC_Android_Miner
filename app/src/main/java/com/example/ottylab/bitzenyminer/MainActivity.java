@@ -118,8 +118,8 @@ public class MainActivity extends AppCompatActivity {
         // provide text edit for mining address
         userAddress = (EditText) findViewById(R.id.editTextUser);
         SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref",MODE_PRIVATE);
-        String tdcAddress = sharedPreferences.getString("user", "");
-        userAddress.setText(tdcAddress);
+        String isoAddress = sharedPreferences.getString("user", "");
+        userAddress.setText(isoAddress);
 
         userAddress.addTextChangedListener(new TextWatcher() {
 
