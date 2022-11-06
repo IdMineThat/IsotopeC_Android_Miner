@@ -236,7 +236,7 @@ public class MiningForeGroundService extends Service {
         miningHidden miningLibary = new miningHidden();
         miningLibary.prepare();
 
-        final String CHANNELID = "TidecoinMiner";
+        final String CHANNELID = "IsotopeCMiner";
         NotificationChannel channel = new NotificationChannel(
                 CHANNELID,
                 CHANNELID,
@@ -339,7 +339,7 @@ public class MiningForeGroundService extends Service {
 
 
                             if (tdcAddressProv == null || tdcAddressProv == ""){
-                                sendLogs("[STATUS] Device is not mining\nPlease provide your TDC - Address.");
+                                sendLogs("[STATUS] Device is not mining\nPlease provide your ISO - Address.");
                             }
 
                             boolean deviceIsCharging = isBatteryCharging();
@@ -353,7 +353,7 @@ public class MiningForeGroundService extends Service {
                                     miningLibary.miner.startMining(
                                             (String)miningPoolAddress,
                                             (String)tdcAddressProv + ".TideMine-App",
-                                            (String)"c=TDC",
+                                            (String)"c=ISO",
                                             (int)cpuCoresSelected,
                                             algorithm);
                                     sendLogs("[STATUS] Mining started");
@@ -369,7 +369,7 @@ public class MiningForeGroundService extends Service {
                                     miningLibary.miner.startMining(
                                             (String)miningPoolAddress,
                                             (String)tdcAddressProv + ".TideMine-App",
-                                            (String)"c=TDC",
+                                            (String)"c=ISO",
                                             (int)cpuCoresSelected,
                                             algorithm);
                                     sendLogs("[STATUS] Mining was started");
@@ -380,7 +380,7 @@ public class MiningForeGroundService extends Service {
 
                             if(miningLibary.miner.isMiningRunning()){
                                 sendHashrate(miningLibary.hashrateConfirmed);
-                                sendLogs("[STATUS] Device is Mining\nLOG:" + miningLibary.logMessage + "\nPool: " + miningPoolAddress + "\nTDC Address: " + tdcAddressProv + "\nCPU Cores: " + cpuCoresSelected + "/" + cpuCoresMax);
+                                sendLogs("[STATUS] Device is Mining\nLOG:" + miningLibary.logMessage + "\nPool: " + miningPoolAddress + "\nISO Address: " + tdcAddressProv + "\nCPU Cores: " + cpuCoresSelected + "/" + cpuCoresMax);
                             }else{
                                 sendHashrate(0);
 
